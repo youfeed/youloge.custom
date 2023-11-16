@@ -1,0 +1,36 @@
+{
+  "name": "youloge.custom",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Youfeed",
+  "license": "MIT",
+  "homepage": "https://youfeed.github.io",
+  "description": "youloge.custom web custom",
+  "main": "dist/youloge.custom.umd.js",
+  "module": "dist/youloge.custom.es.js",
+  "unpkg": "dist/youloge.custom.umd.js",
+  "jsdelivr": "dist/youloge.custom.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/youloge.custom.es.js",
+      "require": "./dist/youloge.custom.umd.js"
+    }
+  },
+  "dependencies": {
+    "terser": "^5.24.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5"
+  }
+}

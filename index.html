@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youloge.Custom</title>
+    <script src="./dist/youloge.custom.iife.js" defer onload="setup()"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Youloge.Custom: 当前Ukey：</h1>
+      <div>
+        <div>code:<code>edit-word</code></div>
+        <div>drive:<xxx-drive>1515</xxx-drive></div>
+        <div>word:<xxx-world>word</xxx-world></div>
+        <div>youloge-word:<youloge-world>xxxxxxxxxxx</youloge-world></div>
+      </div>
+      <div> 
+        Web customElements 原生组件库  用于渲染富文本文章与编辑器保持一致：包含开发者推广
+      </div>
+    </div>
+    <script>
+      const setup = ()=>{
+        console.log('setup',youloge.custom)
+        youloge.custom.setup('xxx')
+      }
+    </script>
+  </body>
+</html>
