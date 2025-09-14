@@ -1,6 +1,15 @@
 import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [vue({
+    template:{
+      compilerOptions:{
+        isCustomElement: (tag) => tag.startsWith('youloge-'),
+      }
+    }
+  })],
   build:{
     target: 'esnext',
     minify: 'terser',
@@ -13,5 +22,10 @@ export default defineConfig({
     rollupOptions:{
     }
   },
-  plugins: [],
+  resolve:{
+    alias:{
+      '@': resolve(__dirname, 'src'),
+      '#': resolve(__dirname, 'lib'),
+    }
+  }
 })
